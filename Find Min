@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package minimum;
+
+/**
+ *
+ * @author test05
+ */
+public class Minimum {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int num1,num2;
+        num1=Integer.parseInt(args[0]);
+        num2=Integer.parseInt(args[1]);
+        
+        if(num1 > num2){
+            System.out.println("Num 2 is smallest");
+        }// TODO code application logic here
+
+        
+        else{
+            System.out.println("Num 1 is smallest");
+        }
+    }
+    
+}
