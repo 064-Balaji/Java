@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Pattern {
+    int i,j;
+    void RightIncreasing(int n){
+        for(i=0; i<n; i++)
+        {
+            for(j=2*(n-i); j>=0; j--) { System.out.print(" "); }
+            for(j=0; j<=i; j++) { System.out.print("* "); }
+            System.out.println();
+        }
+    }
+    void display(){
+        System.out.println("Displaying the pattern...");
+    }
+
+}
+
+class Draw{
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Pattern obj = new Pattern();
+        System.out.println("Enter the value of n : ");
+        int n = s.nextInt();
+        System.out.println("Right Increasing Pattern");
+        obj.RightIncreasing(n);
+    }
+}
