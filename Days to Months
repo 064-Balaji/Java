@@ -1,4 +1,4 @@
-package daytoMonth;
+package excercise1;
 import java.util.Scanner;
 public class DaysToMonths {
     public static void main(String[] args) {
