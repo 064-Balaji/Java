@@ -1,0 +1,73 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package eb_calculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author EDITH
+ */
+
+class calculator{
+    double ebbill(int read, int type){
+        double bill = 0;
+        if(type == 1){
+            if(read <= 100)
+                bill = read * 1;
+            else if(read <= 200){
+                bill = 100 * 1 + (read - 100) * 2.5;
+            }else if(read <= 500){
+                bill = 100 * 1 + 100 * 2.5 + (read - 100) * 4;
+            }else{
+                bill = 100 * 1 + 100 * 2.5 + 300 * 4 + (read - 100) * 6;
+            }
+        }else{
+            if(read <= 100)
+                bill = read * 2;
+            else if(read <= 200){
+                bill = 100 * 2 + (read - 100) * 2.5;
+            }else if(read <= 500){
+                bill = 100 * 2 + 100 * 4.5 + (read - 100) * 6;
+            }else{
+                bill = 100 * 2 + 100 * 4.5 + 300 * 6 + (read - 100) * 7;
+            }
+        }
+        return bill;
+    }
+}
+
+public class EB_calculator{
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        calculator calc = new calculator();
+        double amount;
+        
+        
+        System.out.println("Enter Consumer no:");
+        int cno = sc.nextInt();
+        System.out.println("Enter Consumer Name");
+        String name = sc.next();
+        System.out.println("Previous Month reading");
+        int pre_read = sc.nextInt();
+        System.out.println("Current Month reading");
+        int cur_read = sc.nextInt();
+        System.out.println("Current Month reading (1.Domestic /2.Commercial)" );
+        int con_type = sc.nextInt();
+        
+        amount = calc.ebbill(cur_read,con_type);
+        
+        System.out.println("Electricity Bill");
+        System.out.println("Consumer Number: " + cno);
+        System.out.println("Consumer Name: " + name);
+        System.out.println("Previous Month Reading: " + pre_read);
+        System.out.println("Current Month Reading: " + cur_read);
+        System.out.println("Connection Type: " +con_type);
+        System.out.println("Bill Amount: Rs. " + amount);
+        
+        
+    }
+}
