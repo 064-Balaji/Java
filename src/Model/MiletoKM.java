@@ -39,8 +39,9 @@ public class MiletoKM extends JFrame implements ActionListener {
         add(p1);
         add(p2);
         add(p3);
-
-        setLayout(new FlowLayout());
+        add(Box.createVerticalGlue());
+        add(Box.createVerticalStrut(1));
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         setVisible(true);
         setSize(600,400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
